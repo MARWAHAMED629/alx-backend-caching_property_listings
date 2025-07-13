@@ -10,5 +10,5 @@ from .utils import get_all_properties
 def property_list(request):
     properties = get_all_properties()
     return JsonResponse({
-        'properties': list(properties.values('id', 'title', 'description', 'price', 'location', 'created_at'))
+        'data': list(properties.values('id', 'title', 'description', 'price', 'location', 'created_at'))
     })
